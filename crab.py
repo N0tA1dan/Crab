@@ -1,6 +1,9 @@
 import requests
 import sys
 import socket
+import whois
+
+w = whois.whois('pythonforbeginners.com')
 
 
 args = sys.argv[1:]
@@ -11,7 +14,6 @@ print('''\033[1;31;1m
  / /   / ___/ __ `/ __ |
 / /___/ /  / /_/ / /_/ /
 \____/_/   \__,_/_.___/    By NotAidan.
-
 ''')
 
 def iplookup(host):
@@ -26,20 +28,25 @@ def iplookup(host):
     print("Longitude:", ipsearch['lon'])
     print("Timezone:", ipsearch['timezone'])
     print("ISP:", ipsearch['isp'])
+  
+def pytonwhois(host):
+  w = whois.whois(host)
+
+  print(w.text)
 
 
 try:
     if(args[0] == "-h"):
         print('''Usage: python3 crab.py [Options] {Target}
-
     -h: Shows this menu
     -ps: Port Scan - Scans open ports for a given Host
     -i: Info - Get Basic information on a given Host
     -w: whois - Runs a whois search on a given Host
-
         ''')
     if(args[0] == "-i"):
         iplookup(args[1])
+    if(args[0] == "-w"):
+      pytonwhois(args[1])
 
 except IndexError:
     print("Invalid args. Use [-h] for help")
