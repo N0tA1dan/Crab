@@ -3,8 +3,6 @@ import sys
 import socket
 import whois
 
-w = whois.whois('pythonforbeginners.com')
-
 
 args = sys.argv[1:]
 
@@ -28,10 +26,10 @@ def iplookup(host):
     print("Longitude:", ipsearch['lon'])
     print("Timezone:", ipsearch['timezone'])
     print("ISP:", ipsearch['isp'])
+    print("Organization:", ipsearch['org'])
   
 def pytonwhois(host):
   w = whois.whois(host)
-
   print(w.text)
 
 
