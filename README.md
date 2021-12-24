@@ -25,7 +25,7 @@ cd src
 Install the requirements
 
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 Finally run the file
 
