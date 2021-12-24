@@ -1,3 +1,4 @@
+![Screenshot](/logo/crab.png)
 # Crab
 
 Crab is an open source network intelligence tool for tracking, gathering information, and scanning a host.
