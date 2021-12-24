@@ -24,7 +24,12 @@ Clone Crab onto your machine
 ```
 git clone https://gitub.com/N0tA1dan/crab
 ```
-Next cd into the src directory
+Next cd into the directory
+
+```
+cd crab
+```
+Then cd into the src directory
 
 ```
 cd src
