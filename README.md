@@ -33,6 +33,14 @@ Finally run the file
 python crab.py
 ```
 
+# Usage
+
+To list all the commands type the command below in a terminal
+
+```
+python crab.py -h
+```
+
 # Contact Us
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/u/0/?fs=1&to=notaidan420@gmail.com&tf=cm)
