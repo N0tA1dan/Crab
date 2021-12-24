@@ -5,6 +5,12 @@ Crab is an open source network intelligence tool for tracking, gathering informa
 
 Crab is very minimal and fast compared to some other tools that are available.
 
+# Disclaimer
+
+I am not responsible for whoever uses this code unlawfully. 
+
+This project is open source and anyone can use it/edit it.
+
 # Installation
 
 To install crab you will need 
