@@ -52,12 +52,11 @@ def portscan(host, port):
         pass
 
 def portscan2(host):
-    r = 1
     for x in range(1,10000):
 
-        t = threading.Thread(target=portscan,kwargs={'host':host, 'port': r})
+        t = threading.Thread(target=portscan,kwargs={'host':host, 'port': x})
 
-        r += 1
+        x += 1
         t.start()
 
 
