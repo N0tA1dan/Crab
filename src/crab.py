@@ -65,7 +65,7 @@ try:
     if (args[0] == "-h"):
         print('''Usage: python3 crab.py [Options] {Target}
     -h: Shows this menu
-    -ps: Port Scan - Scans open ports for a given Host
+    -p: Port Scan - Scans open ports for a given Host
     -i: Info - Get Basic information on a given Host
     -w: whois - Runs a whois search on a given Host
         ''')
