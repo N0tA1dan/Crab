@@ -3,6 +3,7 @@ import sys
 import whois
 import threading
 import socket
+import time
 
 
 
@@ -36,11 +37,10 @@ def pytonwhois(host):
     w = whois.whois(host)
     print(w.text)
 
-
 def portscan(host, port):
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(0.5)#
+    s.settimeout(0.5)
 
     try:
         con = s.connect((host,port))
@@ -52,20 +52,48 @@ def portscan(host, port):
         pass
 
 def portscan2(host):
-    for x in range(1,10000):
+    start = time.time()
+    for x in range(1,65535):
 
-        t = threading.Thread(target=portscan,kwargs={'host':host, 'port': x})
+        t = threading.Thread(target=fastportscan,kwargs={'host':host, 'port': x})
 
         x += 1
         t.start()
+    end = time.time()
+    print("took: ", end - start, "seconds")
 
+def fastportscan(host, port):
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(0.5)
+
+    try:
+        con = s.connect((host,port))
+
+        print('Port :',port,"is open.")
+
+        con.close()
+    except:
+        pass
+
+def fastportscan2(host):
+    start = time.time()
+    for x in range(1,1023):
+
+        t = threading.Thread(target=fastportscan,kwargs={'host':host, 'port': x})
+
+        x += 1
+        t.start()
+    end = time.time()
+    print("took: ", end - start, "seconds")
 
 
 try:
     if (args[0] == "-h"):
         print('''Usage: python3 crab.py [Options] {Target}
     -h: Shows this menu
-    -p: Port Scan - Scans open ports for a given Host
+    -p: Port Scan - Casual port scan. Scans every port.
+    -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1023
     -i: Info - Get Basic information on a given Host
     -w: whois - Runs a whois search on a given Host
         ''')
@@ -73,8 +101,11 @@ try:
         iplookup(args[1])
     if (args[0] == "-w"):
         pytonwhois(args[1])
-    if(args[0] == "-p"):
+    if (args[0] == "-p"):
         portscan2(args[1])
+    if(args[0] == "-fp"):
+        fastportscan2(args[1])
 
 except IndexError:
     print("Invalid args. Use [-h] for help")
+
