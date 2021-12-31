@@ -55,6 +55,15 @@ To list all the commands type the command below in a terminal
 python crab.py -h
 ```
 
+Now the port scanning can get a bit tricky
+
+```
+python crab.py -p [your target] [timeout in seconds]
+```
+We need the timeout in seconds because the program goes really fast and uses a lot of processing power. 
+I personally use 0.5 second time out but it may vary from systems. 
+If you have a weak computer, increase the timeout.
+
 # Contact Us
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/u/0/?fs=1&to=notaidan420@gmail.com&tf=cm)
