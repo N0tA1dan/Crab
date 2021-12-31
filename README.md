@@ -5,6 +5,8 @@ Crab is an open source network intelligence tool for tracking, gathering informa
 
 Crab is very minimal and super fast compared to some other tools that are available.
 
+Since crab is super fast the program cant make a connection due to the threading.
+
 # Disclaimer
 
 I am not responsible for whoever uses this code unlawfully. 
