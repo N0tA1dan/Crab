@@ -88,6 +88,7 @@ def fastportscan2(host, timeout):
 try:
     if (args[0] == "-h"):
         print('''Usage: python3 crab.py [Options] {Target}
+        
     -h: Shows this menu
     
     -p: Port Scan - Casual port scan. Scans every port.
