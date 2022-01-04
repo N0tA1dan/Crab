@@ -71,14 +71,14 @@ If you have a weak computer, increase the timeout.
 
 # Support Us 
 
-If you would like to support me you can [buy me a coffee.](https://www.buymeacoffee.com/notaidan)
+If you would like to support me you can [buy me a coffee.](https://www.buymeacoffee.com/notaidan) or you can join my discord
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/notaidan)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/notaidan) [![Discord Chat](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/2AY6PDUFUN) 
 
 
 # Extras
 
-If you would like to support my community please join my discord below.
+If you want to run on replit, simply click the image below.
 
-[![Discord Chat](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/2AY6PDUFUN) [![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)](https://replit.com/@N0tA1dan/crab#main.py)
+[![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)](https://replit.com/@N0tA1dan/crab#main.py)
 
