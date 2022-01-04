@@ -80,5 +80,5 @@ If you would like to support me you can [buy me a coffee.](https://www.buymeacof
 
 If you would like to support my community please join my discord below.
 
-[![Discord Chat](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/2AY6PDUFUN) ![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)](https://replit.com/@N0tA1dan/crab#main.py)
+[![Discord Chat](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/2AY6PDUFUN) [![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)](https://replit.com/@N0tA1dan/crab#main.py)
 
