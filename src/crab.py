@@ -92,7 +92,7 @@ try:
     -h: Shows this menu
     
     -p: Port Scan - Casual port scan. Scans every port.
-        Usage: python crab.py -fp [your target] [time out in seconds]
+        Usage: python crab.py -p [your target] [time out in seconds]
         Example: python crab.py -p google.com 0.5
         
     -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1023
