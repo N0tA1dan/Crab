@@ -5,8 +5,6 @@ import threading
 import socket
 import time
 
-
-
 args = sys.argv[1:]
 
 print('''\033[1;31;1m
@@ -37,47 +35,48 @@ def pytonwhois(host):
     w = whois.whois(host)
     print(w.text)
 
-def portscan(host, port, timeout):
 
+def portscan(host, port, timeout):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(timeout)
 
     try:
-        con = s.connect((host,port))
-        print('Port:',port,"is open.")
+        con = s.connect((host, port))
+        print('Port:', port, "is open.")
         con.close()
     except:
         pass
 
+
 def portscan2(host, timeout):
     start = time.time()
-    for x in range(1,65535):
-        t = threading.Thread(target=fastportscan,kwargs={'host':host, 'port': x, 'timeout': timeout})
+    for x in range(0, 65536):
+        t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
         x += 1
         t.start()
     end = time.time()
     print("took: ", end - start, "seconds")
 
-def fastportscan(host, port, timeout):
 
+def fastportscan(host, port, timeout):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(float(timeout))
 
     try:
-        con = s.connect((host,port))
+        con = s.connect((host, port))
 
-        print('Port :',port,"is open.")
+        print('Port :', port, "is open.")
 
         con.close()
     except:
         pass
 
+
 def fastportscan2(host, timeout):
     start = time.time()
-    for x in range(1,1023):
-
-        t = threading.Thread(target=fastportscan,kwargs={'host':host, 'port': x, 'timeout': timeout})
+    for x in range(0, 1025):
+        t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
         x += 1
         t.start()
@@ -88,19 +87,19 @@ def fastportscan2(host, timeout):
 try:
     if (args[0] == "-h"):
         print('''Usage: python3 crab.py [Options] {Target}
-        
+
     -h: Shows this menu
-    
+
     -p: Port Scan - Casual port scan. Scans every port.
         Usage: python crab.py -p [your target] [time out in seconds]
         Example: python crab.py -p google.com 0.5
-        
+
     -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1023
         Usage: python crab.py -fp [your target] [time out in seconds]
         Example: python crab.py -fp google.com 0.5
-        
+
     -i: Info - Get Basic information on a given Host
-    
+
     -w: whois - Runs a whois search on a given Host
         ''')
     if (args[0] == "-i"):
@@ -109,10 +108,8 @@ try:
         pytonwhois(args[1])
     if (args[0] == "-p"):
         portscan2(args[1], args[2])
-    if(args[0] == "-fp"):
+    if (args[0] == "-fp"):
         fastportscan2(args[1], args[2])
 
 except IndexError:
     print("Invalid args. Use [-h] for help")
-
-
