@@ -94,7 +94,7 @@ try:
         Usage: python crab.py -p [host] [time out in seconds]
         Example: python crab.py -p google.com 0.5
 
-    -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1023
+    -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1024
         Usage: python crab.py -fp [host] [time out in seconds]
         Example: python crab.py -fp google.com 0.5
 
