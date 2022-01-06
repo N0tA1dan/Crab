@@ -87,28 +87,23 @@ def fastportscan2(host, timeout):
 try:
     if (args[0] == "-h"):
         print('''Usage: python crab.py [Options] {Target}
-
     -h: Shows this menu
-
-    -p: Port Scan - Casual port scan. Scans every port.
+    -sA: Port Scan All - Casual port scan. Scans every port on a given host.
         Usage: python crab.py -p [host] [time out in seconds]
         Example: python crab.py -p google.com 0.5
-
-    -fp: Fast Port Scan - Fastest port scan. Only scans from a range of 1 - 1024
+    -sC: Port scan common - Fastest port scan. Only scans from a range of 1 - 1024
         Usage: python crab.py -fp [host] [time out in seconds]
         Example: python crab.py -fp google.com 0.5
-
     -i: Info - Get Basic information on a given Host/IP. Its basically a IP scanner.
-
     -w: whois - Runs a whois search on a given Host
         ''')
     if (args[0] == "-i"):
         iplookup(args[1])
     if (args[0] == "-w"):
         pytonwhois(args[1])
-    if (args[0] == "-p"):
+    if (args[0] == "-sA"):
         portscan2(args[1], args[2])
-    if (args[0] == "-fp"):
+    if (args[0] == "-sC"):
         fastportscan2(args[1], args[2])
 
 except IndexError:
