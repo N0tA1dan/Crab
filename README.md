@@ -58,7 +58,7 @@ python crab.py -h
 Now the port scanning can get a bit tricky
 
 ```
-python crab.py -p [your target] [timeout in seconds]
+python crab.py -sA [your target] [timeout in seconds]
 ```
 We need the timeout in seconds because the program goes really fast and uses a lot of processing power. 
 I personally use 0.5 second time out but it may vary from systems. 
