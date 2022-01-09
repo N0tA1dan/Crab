@@ -53,7 +53,6 @@ def portscan2(host, timeout):
     for x in range(0, 65536):
         t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
-        x += 1
         t.start()
     end = time.time()
     print("took: ", end - start, "seconds")
@@ -78,7 +77,6 @@ def fastportscan2(host, timeout):
     for x in range(0, 1025):
         t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
-        x += 1
         t.start()
     end = time.time()
     print("took: ", end - start, "seconds")
