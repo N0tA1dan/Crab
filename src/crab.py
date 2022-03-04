@@ -38,11 +38,11 @@ def pytonwhois(host):
 
 def portscan(host, port, timeout):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(timeout)
+    s.settimeout(float(timeout))
 
     try:
         con = s.connect((host, port))
-        print('Port:', port, "is open.")
+        print('Port:', port, "is open.   Service ---> ", socket.getservbyport(port))
         con.close()
     except:
         pass
@@ -51,32 +51,22 @@ def portscan(host, port, timeout):
 def portscan2(host, timeout):
     start = time.time()
     for x in range(0, 65536):
-        t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
+        t = threading.Thread(target=portscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
+        x += 1
         t.start()
     end = time.time()
     print("took: ", end - start, "seconds")
 
 
-def fastportscan(host, port, timeout):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(float(timeout))
-
-    try:
-        con = s.connect((host, port))
-
-        print('Port :', port, "is open.")
-
-        con.close()
-    except:
-        pass
 
 
 def fastportscan2(host, timeout):
     start = time.time()
     for x in range(0, 1025):
-        t = threading.Thread(target=fastportscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
+        t = threading.Thread(target=portscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
 
+        x += 1
         t.start()
     end = time.time()
     print("took: ", end - start, "seconds")
