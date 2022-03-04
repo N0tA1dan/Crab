@@ -61,7 +61,7 @@ def portscan2(host, timeout):
 
 
 
-def fastportscan2(host, timeout):
+def fastportscan(host, timeout):
     start = time.time()
     for x in range(0, 1025):
         t = threading.Thread(target=portscan, kwargs={'host': host, 'port': x, 'timeout': timeout})
@@ -92,7 +92,7 @@ try:
     if (args[0] == "-sA"):
         portscan2(args[1], args[2])
     if (args[0] == "-sC"):
-        fastportscan2(args[1], args[2])
+        fastportscan(args[1], args[2])
 
 except IndexError:
     print("Invalid args. Use [-h] for help")
