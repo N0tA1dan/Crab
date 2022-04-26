@@ -9,7 +9,7 @@ Sometimes you have to limit crabs timeout on port scanning because its so fast.
 
 # Disclaimer
 
-I am not responsible for whoever uses this code unlawfully. 
+I am not responsible for whoever uses this program unlawfully. 
 
 This project is open source and anyone can use it/edit it.
 
