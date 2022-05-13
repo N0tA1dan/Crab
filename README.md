@@ -5,7 +5,6 @@ Crab is an open source network scanning tool for tracking, gathering information
 
 Crab is very minimal and super fast compared to some other tools that are available.
 
-Sometimes you have to limit crabs timeout on port scanning because its so fast.
 
 # Disclaimer
 
