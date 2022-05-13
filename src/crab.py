@@ -77,11 +77,11 @@ try:
         print('''Usage: python crab.py [Options] {Target}
     -h: Shows this menu
     -sA: Port Scan All - Casual port scan. Scans every port on a given host.
-        Usage: python crab.py -p [host] [time out in seconds]
-        Example: python crab.py -p google.com 0.5
+        Usage: python crab.py -sA [host] [time out in seconds]
+        Example: python crab.py -sA google.com 0.5
     -sC: Port scan common - Fastest port scan. Only scans from a range of 1 - 1024
-        Usage: python crab.py -fp [host] [time out in seconds]
-        Example: python crab.py -fp google.com 0.5
+        Usage: python crab.py -sC [host] [time out in seconds]
+        Example: python crab.py -sC google.com 0.5
     -i: Info - Get Basic information on a given Host/IP. Its basically a IP scanner.
     -w: whois - Runs a whois search on a given Host
         ''')
