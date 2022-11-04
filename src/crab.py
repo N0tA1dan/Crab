@@ -4,6 +4,7 @@ import whois
 import threading
 import socket
 import time
+from scapy.all import *
 
 args = sys.argv[1:]
 
@@ -14,6 +15,26 @@ print('''\033[1;31;1m
 / /___/ /  / /_/ / /_/ /
 \____/_/   \__,_/_.___/    By NotAidan.
 ''')
+
+
+# os detection using ttl values in a icmp request
+def icmpOSD(host):
+
+    print("\033[1;33;1m-----------------------------------")
+    try:
+        print("Attempting to send ping...")
+        icmp = sr1(IP(dst=f"{host}")/ICMP(), verbose=0)
+        ttl = icmp.ttl
+
+        if(ttl == 128):
+            print("Windows OS detected. ttl = 128")
+        elif(ttl == 64):
+            print("Linux/Unix Detected. ttl = 64")
+        else:
+            print(f"TTL is unrecognized. ttl = {ttl}")
+
+    except Exception as e:
+        print(f"error has occured: {e}")
 
 
 def iplookup(host):
@@ -82,6 +103,10 @@ try:
     -sC: Port scan common - Fastest port scan. Only scans from a range of 1 - 1024
         Usage: python crab.py -sC [host] [time out in seconds]
         Example: python crab.py -sC google.com 0.5
+    -pD: Ping Detection - this command uses icmp requests and analyzes the ttl to derive an OS.
+        --- WARNING --- ping detection might not work unless ran with elevated permissions
+        Usage: python crab.py -pD [host]
+        Example: python crab.py -pD 1.1.1.1
     -i: Info - Get Basic information on a given Host/IP. Its basically a IP scanner.
     -w: whois - Runs a whois search on a given Host
         ''')
@@ -93,6 +118,8 @@ try:
         portscan2(args[1], args[2])
     if (args[0] == "-sC"):
         fastportscan(args[1], args[2])
+    if (args[0] == "-pD"):
+        icmpOSD(args[1])
 
 except IndexError:
     print("Invalid args. Use [-h] for help")
