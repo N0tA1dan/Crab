@@ -62,22 +62,3 @@ python crab.py -sA [your target] [timeout in seconds]
 We need the timeout in seconds because the program goes really fast and uses a lot of processing power. 
 I personally use 0.5 second time out but it may vary from systems. 
 If you have a weak computer, increase the timeout.
-
-# Contact Us
-
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/u/0/?fs=1&to=notaidan420@gmail.com&tf=cm)
-
-
-# Support Us 
-
-If you would like to support me you can [buy me a coffee.](https://www.buymeacoffee.com/notaidan)
-
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/NotAidan)
-
-
-# Replit
-
-If you want to run on replit, simply click the image below.
-
-[![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)](https://replit.com/@N0tA1dan/crab#main.py)
-
